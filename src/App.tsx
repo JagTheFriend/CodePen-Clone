@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./style.css";
 import Editor from "./components/editor";
 
 function App() {
