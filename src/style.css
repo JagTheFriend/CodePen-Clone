@@ -34,6 +34,15 @@ body {
     border-top-left-radius: 0.5rem;
 }
 
+.expand-collapse-btn {
+    margin-left: 0.5rem;
+    background: none;
+    color: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
 .CodeMirror {
     height: 100% !important;
 }
@@ -44,6 +53,7 @@ body {
 
 .editor-container.collapsed .CodeMirror-scroll {
     position: absolute;
+    overflow: hidden !important;
 }
 
 .code-mirror-wrapper {
