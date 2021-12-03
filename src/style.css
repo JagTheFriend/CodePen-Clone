@@ -42,6 +42,10 @@ body {
     flex-grow: 0;
 }
 
+.editor-container.collapsed .CodeMirror-scroll {
+    position: absolute;
+}
+
 .code-mirror-wrapper {
     flex-grow: 1;
     border-top-right-radius: 0.5rem;
