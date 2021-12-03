@@ -38,6 +38,10 @@ body {
     height: 100% !important;
 }
 
+.editor-container.collapsed {
+    flex-grow: 0;
+}
+
 .code-mirror-wrapper {
     flex-grow: 1;
     border-top-right-radius: 0.5rem;
