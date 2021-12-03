@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./style.css";
 import Editor from "./components/editor";
 
@@ -6,19 +6,26 @@ function App() {
     const [html, setHtml] = useState("");
     const [css, setCss] = useState("");
     const [js, setJs] = useState("");
-    const srcDoc = `
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>${html}</body>
-    <style>${css}</style>
-    <script>${js}</script>
-    </html>
-    `;
+    const [srcDoc, setSrcDoc] = useState(``);
+
+    useEffect(() => {
+        const timeOut = setTimeout(() => {
+            setSrcDoc(`
+                <!DOCTYPE html>
+                <html lang="en">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                </head>
+                <body>${html}</body>
+                <style>${css}</style>
+                <script>${js}</script>
+                </html>
+            `);
+        }, 100);
+        return () => clearTimeout(timeOut);
+    }, [html, css, js]);
     return (
         <>
             <div className="pane top-pane">
