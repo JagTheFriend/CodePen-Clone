@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# CodePen Clone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple clone of CodePen built with React
 
 ## Available Scripts
 
