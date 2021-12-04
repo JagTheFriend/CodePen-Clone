@@ -10,6 +10,14 @@ function App() {
     const [srcDoc, setSrcDoc] = useState(``);
 
     useEffect(() => {
+        if (html === "" && css === "" && js === "") {
+            setHtml(`<h1 class="blue">Hello</h1>`);
+            setCss(`.blue {\n\tcolor: blue;\n}`);
+            setJs(``);
+        }
+    });
+
+    useEffect(() => {
         const timeOut = setTimeout(() => {
             setSrcDoc(`
                 <!DOCTYPE html>
